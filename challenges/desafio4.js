@@ -10,3 +10,4 @@ db.produtos.find(
     vendidos: true,
   },
 ).sort({ vendidos: 1 });
+ss
