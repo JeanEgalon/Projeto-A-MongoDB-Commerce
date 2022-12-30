@@ -6,7 +6,7 @@ db.produtos.updateMany(
         $in: ["cebola"],
       },
     },
-  }
+  },
 );
 
 db.produtos.find(
@@ -15,5 +15,5 @@ db.produtos.find(
     _id: false,
     nome: true,
     ingredientes: true,
-  }
+  },
 );
