@@ -1,4 +1,3 @@
-use("commerce");
 db.produtos.updateMany(
   {},
   {
@@ -17,4 +16,20 @@ db.produtos.updateOne(
   },
 );
 
-db.produtos.find({});
+db.produtos.updateOne(
+  { tags: { $in: ["bovino"] } },
+  {
+    $set: {
+      "vendasPorDia.6": 120,
+    },
+  },
+);
+
+db.produtos.find(
+  {},
+  {
+    _id: false,
+    nome: true,
+    vendasPorDia: true,
+  },
+);
